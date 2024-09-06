@@ -1,3 +1,5 @@
 brew install git stow ripgrep fd fzf neovim alacritty mc lazygit bat
 clone to ~/dotfiles
-stow .
+stow zsh
+stow mc
+...
