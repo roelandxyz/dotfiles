@@ -5,7 +5,9 @@
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install git stow ripgrep fd fzf neovim alacritty mc lazygit gh
+cd ~
 git clone https://github.com/roelandxyz/dotfiles.git  
+cd dotfiles
 stow zsh vim tmux nvim mc alacritty  
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim  
@@ -25,7 +27,8 @@ gh auth login
 
 https://github.com/mathiasbynens/dotfiles/blob/main/.macos
 
-# Set a blazingly fast keyboard repeat rate
+### Set a blazingly fast keyboard repeat rate
+```
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
-
+```

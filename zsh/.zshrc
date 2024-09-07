@@ -1,10 +1,10 @@
 
 alias ls='ls --color'
-#alias vi='nvim'
+alias vi='vim'
 alias mc='mc --nosubshell'
 alias lg='lazygit'
 
-export EDITOR="nvim"
+export EDITOR="vim"
 
 ### PROMPT
 parse_git_branch() {
