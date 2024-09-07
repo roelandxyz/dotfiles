@@ -1,20 +1,17 @@
 
-alias vi="nvim"
-export EDITOR="nvim"
+alias ls='ls --color'
+alias vi='nvim'
+alias mc='mc --nosubshell'
+alias lg='lazygit'
 
-alias mc="mc --nosubshell"
+export EDITOR="nvim"
 
 ### PROMPT
 parse_git_branch() {
-    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
+    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1] /p'
 }
-COLOR_DEF='%f'
-COLOR_USR='%F{243}'
-COLOR_DIR='%F{197}'
-COLOR_GIT='%F{39}'
-NEWLINE=$'\n'
 setopt PROMPT_SUBST
-export PROMPT='${COLOR_USR}%n@%M ${COLOR_DIR}%d ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF}${NEWLINE}%% '
+export PROMPT='%(?.%F{14}⏺.%F{9}⏺)%f %1~ %F{39}$(parse_git_branch)%f%# '
 
 ### FZF catppuccin
 export FZF_DEFAULT_OPTS=" \
