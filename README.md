@@ -7,4 +7,4 @@ clone to ~/dotfiles
 stow zsh  
 stow mc  
 stow alacritty  
-
+stow vim

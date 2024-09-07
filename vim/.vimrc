@@ -1,9 +1,8 @@
-" https://github.com/junegunn/vim-plug
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'vim/colorschemes'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 call plug#end()
 
 " set guifont=Fira_Code:h12:cANSI:qDRAFT
@@ -16,7 +15,7 @@ call plug#end()
 "space as leader key
 let mapleader=' '
 
-colorscheme sorbet
+colorscheme catppuccin_mocha
 
 "shared clipboards
 set clipboard^=unnamed,unnamedplus

@@ -1,6 +1,6 @@
 
 alias ls='ls --color'
-alias vi='nvim'
+#alias vi='nvim'
 alias mc='mc --nosubshell'
 alias lg='lazygit'
 
