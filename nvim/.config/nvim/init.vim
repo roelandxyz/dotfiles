@@ -9,10 +9,10 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-Plug 'neovim/nvim-lspconfig'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'folke/tokyonight.nvim'
+Plug 'dense-analysis/ale'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 "space as leader key
@@ -92,7 +92,7 @@ EOF
 " Treesitter
 lua << EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "lua", "vim", "vimdoc", "query" },
+  ensure_installed = { "lua", "vim", "vimdoc", "query", "javascript", "html", "css" },
   highlight = {
     enable = true,
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
@@ -111,3 +111,9 @@ let g:user_emmet_leader_key=','
 iabbrev erb <%%><Left><Left>
 
 " lua require('lsp')
+
+" ale
+let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
+let g:ale_fix_on_save = 1
+
+let g:airline_powerline_fonts = 1

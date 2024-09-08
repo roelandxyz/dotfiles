@@ -1,6 +1,5 @@
-
 alias ls='ls --color'
-alias vi='vim'
+alias vi='nvim'
 alias mc='mc --nosubshell'
 alias lg='lazygit'
 
@@ -11,7 +10,7 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1] /p'
 }
 setopt PROMPT_SUBST
-export PROMPT='%(?.%F{14}⏺.%F{9}⏺)%f %1~ %F{39}$(parse_git_branch)%f%# '
+export PROMPT='%(?.%F{14}⏺.%F{9}⏺)%f %2~ %F{39}$(parse_git_branch)%f%# '
 
 ### FZF catppuccin
 export FZF_DEFAULT_OPTS=" \
