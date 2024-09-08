@@ -41,6 +41,7 @@ set autowrite
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set noshowmode
 
 " change window also with tab
 nnoremap <tab>   <c-w>w
@@ -116,4 +117,6 @@ iabbrev erb <%%><Left><Left>
 let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
 let g:ale_fix_on_save = 1
 
+" airline
+let g:airline_theme = 'catppuccin'
 let g:airline_powerline_fonts = 1
