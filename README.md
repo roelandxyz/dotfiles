@@ -4,7 +4,7 @@
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install git stow ripgrep fd fzf neovim alacritty mc lazygit gh tmux
+brew install git stow ripgrep fd fzf neovim alacritty mc lazygit gh tmux nodejs npm  
 cd ~
 git clone https://github.com/roelandxyz/dotfiles.git  
 cd dotfiles
