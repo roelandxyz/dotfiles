@@ -16,7 +16,9 @@ download and install FiraMono Nerd Font
 https://www.nerdfonts.com/font-downloads
 
 ### Tmux
+```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
 ctrl-B I
 
 ### Open in terminal
@@ -31,10 +33,11 @@ defaults write wang.jianing.app.OpenInTerminal-Lite LiteDefaultTerminal Alacritt
 
 ### Git config
 
+```
 git config --global user.name "Roeland"  
 git config --global user.email "your github email"  
 gh auth login      
-
+```
 
 https://github.com/mathiasbynens/dotfiles/blob/main/.macos
 
