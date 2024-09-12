@@ -2,6 +2,7 @@ call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-sleuth'
 Plug 'mattn/emmet-vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-tree/nvim-web-devicons'
@@ -25,6 +26,9 @@ set clipboard^=unnamed,unnamedplus
 
 " don't wrap long lines
 set nowrap
+
+" always keep the gutter
+set signcolumn=yes
 
 " Save with ctrl s (also in insert mode and then leave insert mode)
 map <C-s> :update<cr>
@@ -116,6 +120,8 @@ iabbrev erb <%%><Left><Left>
 " ale
 let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
 let g:ale_fix_on_save = 1
+let g:airline#extensions#ale#enabled = 1
+let g:ale_disable_lsp = 1
 
 " airline
 let g:airline_theme = 'catppuccin'

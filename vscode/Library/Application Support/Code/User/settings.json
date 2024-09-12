@@ -1,0 +1,7 @@
+{
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": true
+}
