@@ -5,5 +5,29 @@
   "editor.minimap.enabled": false,
   "editor.formatOnSave": true,
   "workbench.editor.showTabs": "single",
-  "vim.vimrc.enable": true
+  "vim.vimrc.enable": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "workbench.tree.indent": 20,
+  "editor.guides.indentation": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.quickSuggestions": {
+    "other": "off"
+  },
+  "editor.quickSuggestionsDelay": 500,
+  "editor.parameterHints.enabled": false,
+  "editor.suggestOnTriggerCharacters": false,
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+        "before": [ "<C-s>" ],
+        "commands": [
+            { "command": "workbench.action.files.save" },
+            { "command": "extension.vim_escape" }
+        ]
+    }
+],
 }

@@ -2,7 +2,6 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'dense-analysis/ale'
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 call plug#end()
 
@@ -32,9 +31,6 @@ map H ^
 map L $
 
 set scrolloff=5
-
-"jump to tag (ctrl-o jumps back)
-nnoremap t <C-]>
 
 "autosave
 set autowrite
@@ -71,6 +67,3 @@ autocmd InsertLeave * set cul
 "timeout for leader key and command
 set timeoutlen=300
 
-" ale
-let g:ale_fix_on_save = 1
-let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
