@@ -4,11 +4,11 @@
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install git stow ripgrep fd fzf neovim alacritty mc lazygit gh tmux nodejs npm  
+brew install git stow ripgrep fd fzf neovim alacritty mc lazygit gh nodejs npm zellij  
 cd ~
 git clone https://github.com/roelandxyz/dotfiles.git  
 cd dotfiles
-stow zsh vim tmux nvim mc alacritty  
+stow zsh vim zellij nvim mc alacritty  
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim  
 ```

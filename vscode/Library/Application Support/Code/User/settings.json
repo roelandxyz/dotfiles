@@ -21,13 +21,5 @@
   "editor.quickSuggestionsDelay": 500,
   "editor.parameterHints.enabled": false,
   "editor.suggestOnTriggerCharacters": false,
-  "vim.insertModeKeyBindingsNonRecursive": [
-    {
-        "before": [ "<C-s>" ],
-        "commands": [
-            { "command": "workbench.action.files.save" },
-            { "command": "extension.vim_escape" }
-        ]
-    }
 ],
 }
