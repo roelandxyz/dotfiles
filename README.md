@@ -4,30 +4,43 @@
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install git stow ripgrep fd fzf neovim alacritty mc lazygit gh nodejs npm zellij  
+brew install git stow ripgrep fd fzf neovim mc lazygit gh nodejs npm zellij  
 cd ~
 git clone https://github.com/roelandxyz/dotfiles.git  
 cd dotfiles
-stow zsh vim zellij nvim mc alacritty  
+stow zsh vim zellij nvim mc 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim  
 ```
 download and install FiraMono Nerd Font
 https://www.nerdfonts.com/font-downloads
 
-### Tmux
+
+### iTerm2 + Zellij
+
+Profile settings
+
+General: Send text at start:  
 ```
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+/opt/homebrew/bin/zellij a -c
 ```
-ctrl-B I
+Text: Font: FiraMono Nerd Font Mono  
+Keys: Option: Esc+
+
 
 ### Open in terminal
 https://github.com/Ji4n1ng/OpenInTerminal/blob/master/Resources/README-Lite.md
 ```
 brew install --cask openinterminal-lite
 brew install --cask openineditor-lite
-defaults write wang.jianing.app.OpenInTerminal-Lite LiteDefaultTerminal Alacritty
+defaults write wang.jianing.app.OpenInTerminal-Lite LiteDefaultTerminal iterm
 ```
+
+### Tmux
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+ctrl-B I
 
 ## Settings
 
