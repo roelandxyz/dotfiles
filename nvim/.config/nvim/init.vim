@@ -97,7 +97,7 @@ EOF
 " Treesitter
 lua << EOF
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = { "lua", "vim", "vimdoc", "query", "javascript", "html", "css" },
+  ensure_installed = { "lua", "vim", "vimdoc", "query", "javascript", "html", "css", "vue" },
   highlight = {
     enable = true,
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
@@ -115,10 +115,8 @@ let g:user_emmet_leader_key=','
 " abbreviations
 iabbrev erb <%%><Left><Left>
 
-" lua require('lsp')
-
 " ale
-let g:ale_fixers = {'javascript': ['prettier', 'eslint'], 'javascriptreact': ['prettier', 'eslint']}
+let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
 let g:ale_fix_on_save = 1
 let g:airline#extensions#ale#enabled = 1
 let g:ale_disable_lsp = 1

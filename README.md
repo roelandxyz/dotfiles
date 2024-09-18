@@ -15,6 +15,14 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 download and install FiraMono Nerd Font
 https://www.nerdfonts.com/font-downloads
 
+### Vim
+
+vim-plug
+```
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+:PlugInstall
 
 ### iTerm2 + Zellij
 
