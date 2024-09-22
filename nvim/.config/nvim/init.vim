@@ -1,6 +1,7 @@
 call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sleuth'
 Plug 'mattn/emmet-vim'
@@ -116,8 +117,15 @@ let g:user_emmet_leader_key=','
 iabbrev erb <%%><Left><Left>
 
 " ale
-let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
+let g:ale_fixers = {
+\   'javascript': ['prettier', 'eslint'],
+\   'html': ['prettier'],
+\}
 let g:ale_fix_on_save = 1
+let g:ale_linters_explicit = 1
 let g:airline#extensions#ale#enabled = 1
 let g:ale_disable_lsp = 1
 
