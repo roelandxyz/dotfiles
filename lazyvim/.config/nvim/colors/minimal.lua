@@ -42,6 +42,10 @@ hi(0, "lCursor", { reverse = true })
 hi(0, "CursorLine", { bg = colors.back_hightlight })
 hi(0, "MatchParen", { bg = colors.back_hightlight, bold = true })
 
+hi(0, "Added", { fg = colors.green })
+hi(0, "Removed", { fg = colors.red })
+hi(0, "Changed", { fg = colors.yellow })
+
 -- hi(0, "Special", { fg = colors.normal, bg = colors.normal_back })
 -- hi(0, "@spell", { fg = colors.normal, bg = colors.normal_back })
 
@@ -57,3 +61,5 @@ hi(0, "@keyword.lua", { fg = colors.normal, bold = true })
 
 -- indent guides
 hi(0, "IblScope", { fg = colors.yellow })
+
+hi(0, "NormalFloat", { fg = colors.normal })
