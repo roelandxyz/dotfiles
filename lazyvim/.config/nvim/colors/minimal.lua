@@ -24,14 +24,30 @@ hi(0, "Delimiter", { fg = colors.base00 })
 hi(0, "Type", { fg = colors.base00 })
 hi(0, "Constant", { fg = colors.base00 })
 hi(0, "Operator", { fg = colors.base00 })
-hi(0, "Comment", { fg = colors.base00 })
+hi(0, "Comment", { fg = colors.base1 })
 hi(0, "Function", { fg = colors.base00 })
 hi(0, "Special", { fg = colors.base00 })
 hi(0, "String", { fg = colors.base00 })
 hi(0, "Identifier", { fg = colors.base00 })
 hi(0, "Statement", { fg = colors.base00 })
+hi(0, "Visual", { bg = colors.base2 })
+hi(0, "LspReferenceText", { bg = colors.base2, bold = true })
+
+-- In a terminal this may not work and you need to change your cursor in the terminal settings
+vim.opt.guicursor:append("a:Cursor/lCursor")
+hi(0, "Cursor", { reverse = true })
+hi(0, "lCursor", { reverse = true })
+
+hi(0, "CursorLine", { fg = colors.base00, bg = colors.base2 })
+hi(0, "MatchParen", { bg = colors.base2, bold = true })
+
+-- hi(0, "Special", { fg = colors.base00, bg = colors.base3 })
+-- hi(0, "@spell", { fg = colors.base00, bg = colors.base3 })
+
 hi(0, "@Variable", { fg = colors.base00 })
 
 -- hi(0, "@keyword.jsdoc", { fg = colors.base00 })
 hi(0, "@function.method.javascript", { fg = colors.base00, bold = true })
 hi(0, "@keyword.type.javascript", { fg = colors.base00, bold = true })
+
+hi(0, "@keyword.lua", { fg = colors.base00, bold = true })
