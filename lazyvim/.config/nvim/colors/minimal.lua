@@ -51,11 +51,15 @@ hi(0, "Changed", { fg = colors.yellow })
 
 hi(0, "@Variable", { fg = colors.normal })
 
+-- javascript
 hi(0, "@comment.documentation.javascript", { fg = colors.magenta })
 hi(0, "@punctuation.delimiter.jsdoc", { fg = colors.magenta })
+hi(0, "@punctuation.bracket.jsdoc", { fg = colors.magenta, bold = true })
 hi(0, "@keyword.jsdoc", { fg = colors.magenta })
+hi(0, "@nospell.jsdoc", { fg = colors.magenta })
 hi(0, "@function.method.javascript", { fg = colors.normal, bold = true })
 hi(0, "@keyword.type.javascript", { fg = colors.normal, bold = true })
+hi(0, "@keyword.import.javascript", { fg = colors.normal, bold = true })
 
 hi(0, "@keyword.lua", { fg = colors.normal, bold = true })
 
