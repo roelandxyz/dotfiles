@@ -4,6 +4,14 @@ return {
     lazy = true,
     name = "catppuccin",
     opts = {
+
+      custom_highlights = function(colors)
+        return {
+          Comment = { fg = colors.flamingo },
+          ["@keyword.jsdoc"] = { fg = colors.flamingo },
+        }
+      end,
+
       integrations = {
         aerial = true,
         alpha = true,
