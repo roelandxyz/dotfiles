@@ -3,4 +3,7 @@
 -- Add any additional keymaps here
 
 local map = vim.keymap.set
-map("n", "<tab>", "<c-w><c-w>", { desc = "Next Window" })
+map("n", "<tab>", "<c-w>w", { desc = "Next Window" })
+map("n", "<S-tab>", "<c-w>W", { desc = "Prev Window" })
+map("n", "<S-Up>", "k", { desc = "Up" })
+map("n", "<S-Down>", "j", { desc = "Up" })

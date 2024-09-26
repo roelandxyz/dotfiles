@@ -52,6 +52,9 @@ hi(0, "Changed", { fg = colors.yellow })
 hi(0, "@Variable", { fg = colors.normal })
 hi(0, "@property", { fg = colors.normal })
 
+hi(0, "DiagnosticError", { fg = colors.red })
+hi(0, "DiagnosticWarn", { fg = colors.orange })
+
 -- javascript
 hi(0, "@comment.documentation.javascript", { fg = colors.magenta })
 hi(0, "@punctuation.delimiter.jsdoc", { fg = colors.magenta })

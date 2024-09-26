@@ -1,6 +1,7 @@
 {
   "extras": [
     "lazyvim.plugins.extras.coding.neogen",
+    "lazyvim.plugins.extras.test.core",
     "lazyvim.plugins.extras.util.mini-hipatterns"
   ],
   "news": {
