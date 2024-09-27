@@ -7,8 +7,18 @@ return {
 
       custom_highlights = function(colors)
         return {
-          Comment = { fg = colors.flamingo },
-          ["@keyword.jsdoc"] = { fg = colors.flamingo },
+          -- Comment = { fg = colors.flamingo },
+          ["@keyword.jsdoc"] = { fg = colors.green },
+          ["@comment.documentation.javascript"] = { fg = colors.green },
+          ["@punctuation.delimiter.jsdoc"] = { fg = colors.green },
+          ["@function.method.call.javascript"] = { fg = colors.text },
+          ["@variable.member.javascript"] = { fg = colors.text },
+          ["@number.javascript"] = { fg = colors.text },
+          ["@boolean.javascript"] = { fg = colors.text },
+          ["@function.call.javascript"] = { fg = colors.text },
+          ["@string.javascript"] = { fg = colors.rosewater },
+          -- ["@keyword.javascript"] = { fg = colors.subtext1 },
+          ["@variable.builtin.javascript"] = { fg = colors.lavender },
         }
       end,
 
