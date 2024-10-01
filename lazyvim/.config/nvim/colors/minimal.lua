@@ -9,6 +9,7 @@ local colors = {
 }
 
 --- Reset to normal colors
+hi(0, "Normal", { fg = colors.normal, bg = "#0b1402" })
 hi(0, "Function", { fg = colors.normal })
 hi(0, "Special", { fg = colors.normal })
 hi(0, "String", { fg = colors.normal })
