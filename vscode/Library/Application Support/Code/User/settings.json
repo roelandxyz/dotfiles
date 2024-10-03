@@ -1,7 +1,6 @@
 {
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.colorTheme": "Solarized Light",
   "workbench.startupEditor": "none",
-  "workbench.iconTheme": "catppuccin-mocha",
   "editor.minimap.enabled": false,
   "editor.formatOnSave": true,
   "workbench.editor.showTabs": "single",
@@ -11,9 +10,6 @@
   "javascript.updateImportsOnFileMove.enabled": "never",
   "workbench.tree.indent": 20,
   "editor.guides.indentation": false,
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.quickSuggestions": {
     "other": "off"
@@ -21,5 +17,15 @@
   "editor.quickSuggestionsDelay": 500,
   "editor.parameterHints.enabled": false,
   "editor.suggestOnTriggerCharacters": false,
-],
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontSize": 14,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "macros": {
+    "saveAndExitVimInsertMode": [
+      "workbench.action.files.save",
+      "extension.vim_escape"
+    ]
+  }
 }
