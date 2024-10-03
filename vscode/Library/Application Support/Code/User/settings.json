@@ -5,6 +5,7 @@
   "editor.formatOnSave": true,
   "workbench.editor.showTabs": "single",
   "vim.vimrc.enable": true,
+  "vim.useSystemClipboard": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
