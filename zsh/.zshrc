@@ -1,9 +1,11 @@
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/roeland/.zsh/completions:"* ]]; then export FPATH="/Users/roeland/.zsh/completions:$FPATH"; fi
 alias ls='ls --color'
 alias vi='nvim'
 alias mc='mc --nosubshell'
 alias lg='lazygit'
 
-export EDITOR="vim"
+export EDITOR="nvim"
 
 bindkey -e
 
@@ -23,3 +25,7 @@ export FZF_DEFAULT_OPTS=" \
 --multi"
 source <(fzf --zsh)
 
+. "/Users/roeland/.deno/env"
+# Initialize zsh completions (added by deno install script)
+autoload -Uz compinit
+compinit
