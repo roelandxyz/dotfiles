@@ -1,11 +1,11 @@
 local hi = vim.api.nvim_set_hl
 
 local colors = {
-  keyword_prominent = "LightSlateBlue",
-  keyword_noticeable = "Thistle",
-  functiondef = "NvimLightYellow",
-  normal = "NvimLightGrey2",
-  documentation = "Orchid",
+	keyword_prominent = "LightBlue",
+	keyword_noticeable = "Thistle",
+	functiondef = "NvimLightYellow",
+	normal = "NvimLightGrey2",
+	documentation = "DarkKhaki",
 }
 
 --- Reset to normal colors
@@ -24,6 +24,7 @@ hi(0, "@keyword.jsdoc", { fg = colors.documentation })
 hi(0, "@nospell.jsdoc", { fg = colors.documentation })
 hi(0, "@function.method.javascript", { fg = colors.functiondef })
 hi(0, "@function.javascript", { fg = colors.functiondef })
+hi(0, "@function.tsx", { fg = colors.functiondef })
 hi(0, "@keyword.type.javascript", { fg = colors.keyword_prominent })
 hi(0, "@keyword.function.javascript", { fg = colors.keyword_prominent })
 hi(0, "@keyword.coroutine.javascript", { fg = colors.keyword_noticeable })
@@ -36,3 +37,4 @@ hi(0, "@keyword.coroutine.javascript", { fg = colors.keyword_noticeable })
 
 --- Lua
 hi(0, "@comment.documentation.lua", { fg = colors.documentation })
+hi(0, "@lsp.typemod.variable.global.lua", { fg = colors.keyword_noticeable })
