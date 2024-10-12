@@ -1,3 +1,11 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+" Source your .vimrc
+" source ~/.vimrc
+
 let mapleader = " "
 set clipboard+=unnamed
 set sidescrolloff=6
@@ -7,6 +15,12 @@ set incsearch
 set visualbell
 set noerrorbells
 
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+map H ^
+map L $
+
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-commentary'
@@ -15,28 +29,25 @@ Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 set ideajoin
 
-" Don't use Ex mode, use Q for formatting.
-map Q gq
-
-map H ^
-map L $
-
 " Save with ctrl s (also in insert mode and then leave insert mode)
 map <C-s> :update<cr>
 imap <C-s> <ESC>:update<cr>
 
+" avoid accidental movement
+map <S-Up> k
+map <S-Down> j
+
 map <leader>n :NERDTree<CR>
 
-map <leader>f <Action>(ReformatCode)
-map <leader>r <Action>(RenameElement)
-map <leader>t <Action>(RiderUnitTestRunSolutionAction)
-map <leader>d <Action>(Debug)
-map <leader>b <Action>(BuildSolutionAction)
-map <leader>s <Action>(SaveAll) \| <Action>(RiderDebuggerApplyEncChagnes)
-map <leader><space> <Action>(SearchEverywhere)
-
-nmap gi <Action>(GotoImplementation)
-nmap gu <Action>(FindUsages)
+"map <leader>f <Action>(ReformatCode)
+"map <leader>r <Action>(RenameElement)
+"map <leader>t <Action>(RiderUnitTestRunSolutionAction)
+"map <leader>d <Action>(Debug)
+"map <leader>b <Action>(BuildSolutionAction)
+"map <leader>s <Action>(SaveAll) \| <Action>(RiderDebuggerApplyEncChagnes)
+"map <leader><space> <Action>(SearchEverywhere)
+"nmap gi <Action>(GotoImplementation)
+"nmap gu <Action>(FindUsages)
 
 
 " Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
@@ -46,5 +57,3 @@ nmap g<C-n> <Plug>NextOccurrence
 xmap g<C-n> <Plug>NextOccurrence
 xmap <C-x> <Plug>SkipOccurrence
 xmap <C-p> <Plug>RemoveOccurrence
-
-

@@ -4,10 +4,14 @@ alias ls='ls --color'
 alias vi='nvim'
 alias mc='mc --nosubshell'
 alias lg='lazygit'
+alias python='python3'
+alias pip='pip3'
 
 export EDITOR="nvim"
 
 bindkey -e
+
+# export PATH=/Users/roeland/.local/bin:$PATH
 
 ### PROMPT
 parse_git_branch() {
@@ -25,7 +29,3 @@ export FZF_DEFAULT_OPTS=" \
 --multi"
 source <(fzf --zsh)
 
-. "/Users/roeland/.deno/env"
-# Initialize zsh completions (added by deno install script)
-autoload -Uz compinit
-compinit

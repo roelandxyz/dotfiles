@@ -4,11 +4,8 @@
   "editor.minimap.enabled": false,
   "editor.formatOnSave": true,
   "workbench.editor.showTabs": "single",
-  "vim.vimrc.enable": true,
-  "vim.useSystemClipboard": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
-  "javascript.updateImportsOnFileMove.enabled": "never",
   "workbench.tree.indent": 20,
   "editor.guides.indentation": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
@@ -20,13 +17,4 @@
   "editor.suggestOnTriggerCharacters": false,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontSize": 14,
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
-  "macros": {
-    "saveAndExitVimInsertMode": [
-      "workbench.action.files.save",
-      "extension.vim_escape"
-    ]
-  }
 }
