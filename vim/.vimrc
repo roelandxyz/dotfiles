@@ -71,7 +71,7 @@ autocmd InsertLeave * set cul
 set timeoutlen=300
 
 "FZF
-nnoremap <leader><space> :GFiles<CR>
+nnoremap <leader><space> :FZF<CR>
 
 "NERDTree
 map <leader>n :NERDTreeToggle<CR>

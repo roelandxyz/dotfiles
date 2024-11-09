@@ -12,6 +12,8 @@ bindkey -e
 export PATH=/Users/roeland/.local/bin:$PATH
 
 ## FZF
+export FZF_DEFAULT_COMMAND="rg --files --sort modified"
+export FZF_DEFAULT_OPTS="--tac"
 source <(fzf --zsh)
 
 ### PROMPT
