@@ -11,7 +11,7 @@ export EDITOR="nvim"
 
 bindkey -e
 
-# export PATH=/Users/roeland/.local/bin:$PATH
+export PATH=/Users/roeland/.local/bin:$PATH
 
 ### PROMPT
 parse_git_branch() {
@@ -29,3 +29,5 @@ export FZF_DEFAULT_OPTS=" \
 --multi"
 source <(fzf --zsh)
 
+
+alias kamal='docker run -it --rm -v "${PWD}:/workdir" -v "/run/host-services/ssh-auth.sock:/run/host-services/ssh-auth.sock" -e SSH_AUTH_SOCK="/run/host-services/ssh-auth.sock" -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/basecamp/kamal:latest'

@@ -17,4 +17,11 @@
   "editor.suggestOnTriggerCharacters": false,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontSize": 14,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "workbench.iconTheme": "vscode-icons",
+  "vsicons.presets.foldersAllDefaultIcon": true,
+  "vsicons.presets.hideExplorerArrows": true,
+  "vsicons.projectDetection.disableDetect": true,
+  "vsicons.dontShowNewVersionMessage": true
 }
