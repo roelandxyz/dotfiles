@@ -1,10 +1,9 @@
 local hi = vim.api.nvim_set_hl
 
 local colors = {
-	keyword_prominent = "LightRed",
-	-- keyword_noticeable = "Honeydew",
+	keyword_prominent = "#beedeb",
 	keyword_noticeable = "LightYellow",
-	functiondef = "LightYellow",
+	functiondef = "#dcf2e0",
 	normal = "NvimLightGrey2",
 	documentation = "NvimLightGrey4",
 }
