@@ -2,7 +2,10 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdtree'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 " set guifont=Fira_Code:h12:cANSI:qDRAFT
@@ -15,7 +18,7 @@ call plug#end()
 "space as leader key
 let mapleader=' '
 
-colorscheme catppuccin_mocha
+colorscheme quiet
 
 "shared clipboards
 set clipboard^=unnamed,unnamedplus
@@ -67,3 +70,9 @@ autocmd InsertLeave * set cul
 "timeout for leader key and command
 set timeoutlen=300
 
+"NERDTree
+map <leader>n :NERDTreeToggle<CR>
+let NERDTreeQuitOnOpen = 1
+
+" abbreviations
+iabbrev erb <%%><Left><Left>

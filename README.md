@@ -16,7 +16,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 download and install FiraMono Nerd Font
 https://www.nerdfonts.com/font-downloads
 
-### iTerm2 + Zellij
+### iTerm2 + Zellij (old)
 
 Profile settings
 
@@ -39,7 +39,7 @@ brew install --cask openineditor-lite
 defaults write wang.jianing.app.OpenInTerminal-Lite LiteDefaultTerminal iterm
 ```
 
-### Vim (old)
+### Vim
 
 vim-plug
 
@@ -50,7 +50,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 :PlugInstall
 
-### Tmux (old)
+### Tmux 
 
 ```
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -67,8 +67,6 @@ git config --global user.name "Roeland"
 git config --global user.email "your github email"
 gh auth login
 ```
-
-https://github.com/mathiasbynens/dotfiles/blob/main/.macos
 
 ### Set a blazingly fast keyboard repeat rate
 
