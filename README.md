@@ -4,7 +4,7 @@
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install git stow ripgrep fd fzf neovim mc lazygit gh nodejs npm zellij
+brew install git stow ripgrep fd fzf neovim mc lazygit gh nodejs npm 
 cd ~
 git clone https://github.com/roelandxyz/dotfiles.git
 cd dotfiles

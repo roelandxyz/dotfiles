@@ -70,6 +70,9 @@ autocmd InsertLeave * set cul
 "timeout for leader key and command
 set timeoutlen=300
 
+"FZF
+nnoremap <leader><space> :GFiles<CR>
+
 "NERDTree
 map <leader>n :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
