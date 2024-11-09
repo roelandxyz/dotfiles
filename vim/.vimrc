@@ -5,11 +5,12 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'dense-analysis/ale'
 call plug#end()
 
 " set guifont=Fira_Code:h12:cANSI:qDRAFT
-" set guioptions -=T 
+" set guioptions -=T
 " set guioptions-=r  "scrollbar
 " set lines=35 columns=100
 " au BufReadPost *.cln set syntax=baan
@@ -76,6 +77,14 @@ nnoremap <leader><space> :FZF<CR>
 "NERDTree
 map <leader>n :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
+
+" Ale
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\   'go': ['gopls'],
+\}
 
 " abbreviations
 iabbrev erb <%%><Left><Left>
