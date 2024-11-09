@@ -5,8 +5,8 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'dense-analysis/ale'
+"Plug 'dense-analysis/ale'
+"Plug 'yegappan/lsp'
 call plug#end()
 
 " set guifont=Fira_Code:h12:cANSI:qDRAFT
@@ -79,12 +79,31 @@ map <leader>n :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
 
 " Ale
-let g:ale_fix_on_save = 1
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['eslint'],
-\   'go': ['gopls'],
-\}
+" let g:ale_fix_on_save = 1
+" let g:ale_fixers = {
+" \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+" \   'javascript': ['eslint'],
+" \   'go': ['goimports']
+" \}
 
 " abbreviations
 iabbrev erb <%%><Left><Left>
+
+" LSP
+" let lspOpts = #{
+"     \ autoHighlightDiags: v:true,
+"     \   workspaceConfig: #{
+"     \     gopls: #{
+"     \       gofumpt: v:true,
+"     \     }
+"     \   }
+"     \ }
+" autocmd User LspSetup call LspOptionsSet(lspOpts)
+" let lspServers = [#{
+" 	\    name: 'golang',
+" 	\    filetype: ['go', 'gomod'],
+" 	\    path: 'gopls',
+" 	\    args: ['serve'],
+" 	\    syncInit: v:true
+" 	\  }]
+" autocmd User LspSetup call LspAddServer(lspServers)

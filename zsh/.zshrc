@@ -1,5 +1,5 @@
 alias ls='ls --color'
-#alias vi='nvim'
+alias vi='nvim'
 alias mc='mc --nosubshell'
 alias lg='lazygit'
 #alias python='python3'
@@ -9,7 +9,7 @@ export EDITOR="vi"
 
 bindkey -e
 
-export PATH=/Users/roeland/.local/bin:$PATH
+export PATH=/Users/roeland/.local/bin:$HOME/go/bin:$PATH
 
 ## FZF
 export FZF_DEFAULT_COMMAND="rg --files --sort modified"
