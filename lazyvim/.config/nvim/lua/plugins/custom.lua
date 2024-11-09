@@ -1,5 +1,5 @@
 return {
-  { "folke/noice.nvim", enabled = false },
+  { "folke/noice.nvim", enabled = true },
 
   -- no 'tabs'
   { "akinsho/bufferline.nvim", enabled = false },
@@ -30,7 +30,7 @@ return {
     "nvim-lualine/lualine.nvim",
     opts = {
       options = {
-        theme = "horizon",
+        theme = "onedark",
       },
     },
   },
