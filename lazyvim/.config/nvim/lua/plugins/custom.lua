@@ -1,6 +1,10 @@
 return {
-  { "folke/noice.nvim", enabled = false },
+  { "folke/noice.nvim", enabled = true },
+
+  -- no 'tabs'
   { "akinsho/bufferline.nvim", enabled = false },
+
+  --  no indent guides
   { "lukas-reineke/indent-blankline.nvim", enabled = false },
   { "mg979/vim-visual-multi" },
 
@@ -8,7 +12,6 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "quiet",
-      -- colorscheme = "tokyonight",
     },
   },
 
@@ -22,6 +25,7 @@ return {
     end,
   },
 
+  -- Sort files by modified date
   {
     "nvim-telescope/telescope.nvim",
     opts = {
@@ -31,30 +35,6 @@ return {
           find_command = { "rg", "--files", "--color", "never", "-g", "!.git", "--sortr=modified" },
           hidden = true,
         },
-      },
-    },
-  },
-
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "bash",
-        "html",
-        "javascript",
-        "css",
-        "json",
-        "lua",
-        "markdown",
-        "markdown_inline",
-        "python",
-        "query",
-        "regex",
-        "tsx",
-        "typescript",
-        "vim",
-        "yaml",
-        "go",
       },
     },
   },
