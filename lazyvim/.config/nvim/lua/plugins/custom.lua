@@ -5,7 +5,7 @@ return {
   { "akinsho/bufferline.nvim", enabled = false },
 
   --  no indent guides
-  -- { "lukas-reineke/indent-blankline.nvim", enabled = false },
+  { "lukas-reineke/indent-blankline.nvim", enabled = false },
 
   -- multiple cursors
   { "mg979/vim-visual-multi" },
