@@ -7,7 +7,7 @@ map("n", "<tab>", "<c-w>w", { desc = "Next Window" })
 map("n", "<S-tab>", "<c-w>W", { desc = "Prev Window" })
 
 -- avoid accidental page up/down
-map("n", "<S-Up>", "k", { desc = "Up" })
-map("n", "<S-Down>", "j", { desc = "Down" })
-map("n", "<PageUp>", "k", { desc = "Up" })
-map("n", "<PageDown>", "j", { desc = "Down" })
+map({ "v", "i" }, "<S-Up>", "<Up>", { desc = "Up" })
+map({ "v", "i" }, "<S-Down>", "<Down>", { desc = "Down" })
+map({ "v", "i" }, "<PageUp>", "<Up>", { desc = "Up" })
+map({ "v", "i" }, "<PageDown>", "<Down>", { desc = "Down" })
