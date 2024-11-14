@@ -23,4 +23,8 @@ parse_git_branch() {
 setopt PROMPT_SUBST
 export PROMPT='%(?.%F{14}⏺.%F{9}⏺)%f %2~ %F{39}$(parse_git_branch)%f%# '
 
-alias kamal='docker run -it --rm -v "${PWD}:/workdir" -v "/run/host-services/ssh-auth.sock:/run/host-services/ssh-auth.sock" -e SSH_AUTH_SOCK="/run/host-services/ssh-auth.sock" -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/basecamp/kamal:latest'
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/roeland/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/roeland/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/roeland/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/roeland/google-cloud-sdk/completion.zsh.inc'; fi
