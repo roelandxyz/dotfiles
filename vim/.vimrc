@@ -5,30 +5,26 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
-"Plug 'dense-analysis/ale'
-"Plug 'yegappan/lsp'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 
 if has("gui_running")
     set guifont=JetBrainsMonoNFM-Regular:h13
+    set guioptions=
 
     " set guifont=Fira_Code:h12:cANSI:qDRAFT
-    " set guioptions -=T
-    " set guioptions-=r  "scrollbar
     " set lines=35 columns=100
-    " au BufReadPost *.cln set syntax=baan
-    " autocmd FileType baan setlocal commentstring=\|*\ %s
 endif
 
-"space as leader key
+" space as leader key
 let mapleader=' '
 
+" no colors
 set background=dark
 colorscheme quiet
 
-"shared clipboards
+" shared clipboards
 set clipboard^=unnamed,unnamedplus
 
 " don't wrap long lines
@@ -47,12 +43,13 @@ imap <C-a> <ESC>I
 map <C-e> <ESC>$
 imap <C-e> <ESC>A
 
-
+" always show 5 lines above/below
 set scrolloff=5
 
 "autosave
 set autowrite
 
+" tab is 4 spaces
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -92,52 +89,17 @@ nnoremap <leader><space> :FZF<CR>
 map <leader>n :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen = 1
 
-" Ale
-" let g:ale_fix_on_save = 1
-" let g:ale_fixers = {
-" \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-" \   'javascript': ['eslint'],
-" \   'go': ['goimports']
-" \}
-
 " abbreviations
 iabbrev erb <%%><Left><Left>
 
-" LSP
-" let lspOpts = #{
-"     \ autoHighlightDiags: v:true,
-"     \   workspaceConfig: #{
-"     \     gopls: #{
-"     \       gofumpt: v:true,
-"     \     }
-"     \   }
-"     \ }
-" autocmd User LspSetup call LspOptionsSet(lspOpts)
-" let lspServers = [#{
-" 	\    name: 'golang',
-" 	\    filetype: ['go', 'gomod'],
-" 	\    path: 'gopls',
-" 	\    args: ['serve'],
-" 	\    syncInit: v:true
-" 	\  }]
-" autocmd User LspSetup call LspAddServer(lspServers)
-
 " Go
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 
-autocmd FileType go nmap <leader>t  <Plug>(go-test)
+autocmd FileType go nmap <leader>b <Plug>(go-build)
+autocmd FileType go nmap <leader>t <Plug>(go-test)
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
-autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <leader>r <Plug>(go-run)
 
-" run :GoBuild or :GoTestCompile based on the go file
-function! s:build_go_files()
-  let l:file = expand('%')
-  if l:file =~# '^\f\+_test\.go$'
-    call go#test#Test(0, 1)
-  elseif l:file =~# '^\f\+\.go$'
-    call go#cmd#Build(0)
-  endif
-endfunction
-
-autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
-
+" Baan
+au BufReadPost *.cln set syntax=baan
+autocmd FileType baan setlocal commentstring=\|*\ %s
 
