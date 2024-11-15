@@ -1,15 +1,18 @@
 alias ls='ls --color'
-alias vi='nvim'
+#alias vi='nvim'
 alias mc='mc --nosubshell'
 alias lg='lazygit'
 #alias python='python3'
 #alias pip='pip3'
 
-export EDITOR="vi"
+export EDITOR="vim"
 
 bindkey -e
 
-export PATH=/Users/roeland/.local/bin:$HOME/go/bin:$PATH
+export PATH="/opt/homebrew/bin":$PATH
+export PATH=$HOME/.local/bin:$HOME/go/bin:$PATH
+export PATH="/Applications/MacVim.app/Contents/bin:$PATH"
+
 
 ## FZF
 export FZF_DEFAULT_COMMAND="rg --files --sort modified"

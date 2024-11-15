@@ -17,6 +17,7 @@ set noerrorbells
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
+" home/end like in readline
 map <C-a> <ESC>^
 imap <C-a> <ESC>I
 map <C-e> <ESC>$

@@ -7,14 +7,20 @@ Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 "Plug 'dense-analysis/ale'
 "Plug 'yegappan/lsp'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
-" set guifont=Fira_Code:h12:cANSI:qDRAFT
-" set guioptions -=T
-" set guioptions-=r  "scrollbar
-" set lines=35 columns=100
-" au BufReadPost *.cln set syntax=baan
-" autocmd FileType baan setlocal commentstring=\|*\ %s
+
+if has("gui_running")
+    set guifont=JetBrainsMonoNFM-Regular:h13
+
+    " set guifont=Fira_Code:h12:cANSI:qDRAFT
+    " set guioptions -=T
+    " set guioptions-=r  "scrollbar
+    " set lines=35 columns=100
+    " au BufReadPost *.cln set syntax=baan
+    " autocmd FileType baan setlocal commentstring=\|*\ %s
+endif
 
 "space as leader key
 let mapleader=' '
@@ -31,8 +37,12 @@ set nowrap
 map <C-s> :update<cr>
 imap <C-s> <ESC>:update<cr>
 
-map H ^
-map L $
+" home/end like in readline
+map <C-a> <ESC>^
+imap <C-a> <ESC>I
+map <C-e> <ESC>$
+imap <C-e> <ESC>A
+
 
 set scrolloff=5
 
