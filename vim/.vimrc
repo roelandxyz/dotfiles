@@ -25,6 +25,7 @@ endif
 "space as leader key
 let mapleader=' '
 
+set background=dark
 colorscheme quiet
 
 "shared clipboards
@@ -32,6 +33,9 @@ set clipboard^=unnamed,unnamedplus
 
 " don't wrap long lines
 set nowrap
+
+" make split less ugly
+set fillchars+=vert:│
 
 " Save with ctrl s (also in insert mode and then leave insert mode)
 map <C-s> :update<cr>
@@ -117,3 +121,23 @@ iabbrev erb <%%><Left><Left>
 " 	\    syncInit: v:true
 " 	\  }]
 " autocmd User LspSetup call LspAddServer(lspServers)
+
+" Go
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
+autocmd FileType go nmap <Leader>i <Plug>(go-info)
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+
+

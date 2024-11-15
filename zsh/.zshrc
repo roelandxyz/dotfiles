@@ -15,8 +15,7 @@ export PATH="/Applications/MacVim.app/Contents/bin:$PATH"
 
 
 ## FZF
-export FZF_DEFAULT_COMMAND="rg --files --sort modified"
-export FZF_DEFAULT_OPTS="--tac"
+#export FZF_DEFAULT_COMMAND="rg --files --sortr modified"
 source <(fzf --zsh)
 
 ### PROMPT
