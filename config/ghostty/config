@@ -48,5 +48,6 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
+cursor-style = block
 window-height = 30
 window-width = 110

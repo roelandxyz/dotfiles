@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo apt install lazygit ripgrep mc curl wget vim-gtk3 fzf tmux
+sudo apt install lazygit ripgrep mc curl wget vim-gtk3 fzf tmux fd-find
 
 if [ ! -f "$HOME/.vim/autoload/plug.vim" ]; then
   curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
@@ -32,4 +32,4 @@ mkdir -p ~/.config/mc
 cp $(pwd)/config/mc/ini ~/.config/mc/
 
 mkdir -p ~/.config/ghostty
-ln -i $(pwd)/config/ghostty/config ~/.config/ghostty/
+ln -i -s $(pwd)/config/ghostty/config ~/.config/ghostty/
