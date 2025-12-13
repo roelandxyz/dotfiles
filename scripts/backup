@@ -1,0 +1,5 @@
+#!/bin/sh
+
+rclone sync --progress ~/Nextcloud hetzner:nextcloud
+rclone sync --progress ~/dev hetzner:dev
+

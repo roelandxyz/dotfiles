@@ -1,0 +1,35 @@
+#!/bin/sh
+
+sudo apt install lazygit ripgrep mc curl wget vim-gtk3 fzf tmux
+
+if [ ! -f "$HOME/.vim/autoload/plug.vim" ]; then
+  curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+ln -i -s $(pwd)/vimrc ~/.vimrc
+
+if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+mkdir -p ~/.config/tmux
+ln -i -s $(pwd)/config/tmux/tmux.conf ~/.config/tmux/
+
+mkdir -p ~/dev
+cp -i $(pwd)/gitconfig ~/.gitconfig
+
+ln -i -s $(pwd)/bash_custom ~/.bash_custom
+echo '. ~/.bash_custom' >> ~/.bashrc
+
+if [ ! -f "$HOME/.local/bin/nvim" ]; then
+  mkdir -p ~/.local/bin
+  wget -O ~/.local/bin/nvim https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.appimage
+  chmod a+x ~/.local/bin/nvim
+fi
+mkdir -p ~/.config/nvim
+ln -i -s $(pwd)/config/nvim/init.lua ~/.config/nvim/
+
+mkdir -p ~/.config/mc
+cp $(pwd)/config/mc/ini ~/.config/mc/
+
+mkdir -p ~/.config/ghostty
+ln -i $(pwd)/config/ghostty/config ~/.config/ghostty/

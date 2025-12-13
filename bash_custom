@@ -1,0 +1,15 @@
+# add ". ~/.bash_custom" to your ~/.bashrc
+
+alias vi="nvim"
+alias lg="lazygit"
+alias fd="fdfind"
+export EDITOR=nvim
+export PATH=$HOME/dev/dotfiles/scripts:$HOME/.local/bin:$PATH
+eval "$(fzf --bash)"
+#PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+# use this for root: PS1='\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+# Auto-start tmux if not running inside tmux
+if [ "$TERM_PROGRAM" = "ghostty" ] && [ -z "$TMUX" ]; then
+    exec tmux
+fi
