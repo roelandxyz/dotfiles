@@ -30,6 +30,3 @@ ln -i -s $(pwd)/config/nvim/init.lua ~/.config/nvim/
 
 mkdir -p ~/.config/mc
 cp $(pwd)/config/mc/ini ~/.config/mc/
-
-mkdir -p ~/.config/ghostty
-ln -i -s $(pwd)/config/ghostty/config ~/.config/ghostty/
