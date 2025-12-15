@@ -72,5 +72,5 @@ vim.keymap.set('n', '\\', ':FzfLua buffers<CR>')
 vim.keymap.set('n', '<leader>sg', ':FzfLua live_grep<CR>')
 
 -- lsp
-vim.lsp.enable({ "lua_ls", "eslint" })
+vim.lsp.enable({ "lua_ls", "eslint", "pyright" })
 vim.keymap.set('n', '<leader>cf', ':LspEslintFixAll<CR>')
