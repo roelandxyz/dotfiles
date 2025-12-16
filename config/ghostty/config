@@ -51,3 +51,6 @@
 cursor-style = block
 window-height = 30
 window-width = 110
+theme = dracula
+font-family = "Hack Nerd Font Mono"
+font-size = 12
