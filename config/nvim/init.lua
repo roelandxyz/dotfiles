@@ -54,6 +54,9 @@ vim.keymap.set("i", "<C-Space>", "<C-x><C-o>", { noremap = true })
 
 -- lsp shortcuts (K, grn, grr, gri, g0, gra, .... are defaults)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
+vim.keymap.set("n", "<leader>cf", function()
+    vim.lsp.buf.format({ async = true })
+end, { desc = "Format file" })
 
 -- show diagnostics on request
 vim.keymap.set('n', '<leader>sd', vim.diagnostic.open_float, { desc = 'Show diagnostics in float' })
@@ -71,22 +74,5 @@ vim.keymap.set('n', '<leader><space>', ':FzfLua files<CR>')
 vim.keymap.set('n', '\\', ':FzfLua buffers<CR>')
 vim.keymap.set('n', '<leader>sg', ':FzfLua live_grep<CR>')
 
--- combine ruff and pyright
-vim.api.nvim_create_autocmd("LspAttach", {
-  group = vim.api.nvim_create_augroup('lsp_attach_disable_ruff_hover', { clear = true }),
-  callback = function(args)
-    local client = vim.lsp.get_client_by_id(args.data.client_id)
-    if client == nil then
-      return
-    end
-    if client.name == 'ruff' then
-      -- Disable hover in favor of Pyright
-      client.server_capabilities.hoverProvider = false
-    end
-  end,
-  desc = 'LSP: Disable hover capability from Ruff',
-})
-
 -- lsp
-vim.lsp.enable({ "lua_ls", "eslint", "pyright", "ruff" })
-vim.keymap.set('n', '<leader>cf', ':LspEslintFixAll<CR>')
+vim.lsp.enable({ "lua_ls", "eslint", "ty", "ruff" })

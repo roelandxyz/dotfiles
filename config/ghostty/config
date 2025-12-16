@@ -49,8 +49,9 @@
 # resize-overlay-duration = 4s 200ms
 
 cursor-style = block
-window-height = 30
+window-height = 35
 window-width = 110
 theme = dracula
 font-family = "Hack Nerd Font Mono"
 font-size = 12
+app-notifications = no-clipboard-copy
