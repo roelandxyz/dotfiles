@@ -36,9 +36,6 @@ vim.keymap.set('i', '<C-s>', '<Esc>:update<CR>', { noremap = true, silent = true
 vim.keymap.set('n', '<tab>', '<c-w>w', { noremap = true })
 vim.keymap.set('n', '<S-tab>', '<c-w>W', { noremap = true })
 
--- remove hightlights
-vim.keymap.set('n', '<CR>', ':noh<CR>', { noremap = true })
-
 -- vertical split
 vim.keymap.set('n', '"', ':vsplit<CR>', { noremap = true })
 

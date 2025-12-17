@@ -62,8 +62,8 @@ set splitright
 "map <F4> :vsplit<cr>
 "map " :vsplit<cr>
 
-" clear search highlight on enter
-nnoremap <CR> :noh<CR>
+" clear search highlight
+nmap <silent> <C-l> :noh<cr>
 
 " highlight selection on yank
 au TextYankPost * silent! lua vim.highlight.on_yank()
