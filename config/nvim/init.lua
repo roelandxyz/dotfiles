@@ -10,8 +10,6 @@ vim.pack.add({
     { src = "https://github.com/nvim-treesitter/nvim-treesitter", run = ":TSUpdate" },
     { src = "https://github.com/catppuccin/nvim" },
 
-    { src = "https://github.com/blueyed/smarty.vim" },
-
     -- dependencies
     { src = "https://github.com/nvim-lua/plenary.nvim" },
     { src = "https://github.com/MunifTanjim/nui.nvim" },
@@ -26,7 +24,24 @@ vim.cmd("set shiftwidth=4")
 vim.g.mapleader = " "
 
 -- looks and colors
+-- https://catppuccin.com/palette/
+-- TODO: https://github.com/catppuccin/nvim?tab=readme-ov-file#customization
 vim.cmd("colorscheme catppuccin")
+local hl = vim.api.nvim_set_hl
+hl(0, "String", { fg = "#cdd6f4", bg = "#1e1e2e" })
+hl(0, "Type", { fg = "#cdd6f4", bg = "#1e1e2e" })
+hl(0, "Function", { fg = "#cdd6f4", bg = "#1e1e2e" })
+hl(0, "Identifier", { fg = "#cdd6f4", bg = "#1e1e2e" })
+hl(0, "Operator", { fg = "#cdd6f4", bg = "#1e1e2e" })
+hl(0, "Constant", { fg = "#cdd6f4", bg = "#1e1e2e" })
+hl(0, "@variable.parameter", { fg = "#cdd6f4", bg = "#1e1e2e" })
+hl(0, "@module", { fg = "#cdd6f4", bg = "#1e1e2e" })
+
+hl(0, "PreProc", { fg = "#f5c2e7" })
+hl(0, "pythonDecorator", { fg = "#f5c2e7", bold = true })
+hl(0, "@lsp.typemod.class.definition.python", { fg = "#f9e2af" })
+hl(0, "@lsp.typemod.method.definition.python", { fg = "#89b4fa" })
+hl(0, "@lsp.typemod.function.definition.python", { fg = "#89b4fa" })
 
 -- save with ctrl-s and go to normal mode if needed
 vim.keymap.set('n', '<C-s>', ':update<CR>', { noremap = true, silent = true })
